@@ -13,8 +13,22 @@
         background-color: darken($colorPrimary , 10%); //變暗
     }
 }
-// 圓角
+
+// 大型按鈕
 .btn-large{
     @include btn(12px, $colorSecondary, 8px);
+    margin: 10px auto;
+}
+
+// 小型按鈕
+.btn-small{
+    @include btn(6px, #7a0600, 4px);
+    margin: 10px auto;
+    color: #fff;
+}
+
+// 圓形按鈕
+.btn-circle{
+    @include btn(10px, $colorPrimary, 25px, '\2713');
     margin: 10px auto;
 }

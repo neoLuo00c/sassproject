@@ -39,8 +39,22 @@ h3{
     transition: all 0.3s ease;
     // 圓角
     border-radius: $bdr;
+
     // hover
     &:hover{
         background-color: darken($bgc, 10%); // 變暗
+    }
+
+    @if $icon{
+        &::before{
+            content: '#{$icon}';
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            vertical-align: middle;
+            position: relative;
+            top: -8px;
+            left: -5px;
+        }
     }
 }
