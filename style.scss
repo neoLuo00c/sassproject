@@ -12,6 +12,9 @@
 // 組件
 @import 'sass/component/btn';
 @import 'sass/component/card';
+@import 'sass/component/header';
+@import 'sass/component/footer';
+@import 'sass/component/login';
 
 // 版面配置
 @import 'sass/layout/header';
@@ -68,6 +71,3 @@ $attr: border;
     color: lighten(#000, 100%) ; //變亮
     background-color: darken(#fff, 100%); //變暗
 }
-// @import 'sass/component/header';
-// @import 'sass/component/footer';
-// @import 'sass/component/login';
