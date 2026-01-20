@@ -1,1 +1,117 @@
-/*# sourceMappingURL=style.css.map */
+.w {
+  width: 100px;
+}
+
+.z {
+  width: 300px;
+}
+
+.b {
+  width: 300px;
+}
+
+.content-box {
+  box-sizing: content-box;
+  border: 1px solid #0062ff;
+  background-image: url("content-box.jpg");
+  border: 5px;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  box-sizing: border-box;
+  background-color: #f8ca66;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 8px 10px;
+}
+
+.container {
+  width: 100%;
+}
+.container header {
+  width: 100%;
+}
+.container header section.fixed {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e1e1e1;
+}
+.container header .logo {
+  width: 50px;
+  height: 50px;
+  background-color: #3eff62;
+}
+.container header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+.container header nav ul li {
+  width: 120px;
+  text-align: center;
+  margin: 0px 10px;
+}
+.container header nav ul li a {
+  text-decoration: none;
+  color: #333;
+  transition: all 0.3s ease;
+}
+.container header nav ul li a:hover {
+  color: #0062ff;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #0062ff;
+}
+.container header nav ul li a::before {
+  content: ">";
+}
+.container footer {
+  width: 100%;
+  background-color: #e1e1e1;
+}
+.container footer .footer-fixed {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container footer .logo-footer {
+  width: 50px;
+  height: 50px;
+  background-color: #3eff62;
+}
+.container footer nav.menu-footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+.container footer nav.menu-footer ul li {
+  width: 120px;
+  text-align: center;
+  margin: 0px 10px;
+}
+.container footer nav.menu-footer ul li a {
+  text-decoration: none;
+  color: #333;
+}
+.container p.copy {
+  font-size: 14px;
+  color: #333;
+}
+
+.wrapper {
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */
+
