@@ -1,0 +1,52 @@
+// scss 編譯過的 註解
+
+// 變數引入
+@import 'sass/base/var';
+@import 'sass/base/font';
+@import 'sass/base/color';
+@import 'sass/base/reset';
+
+// 函式庫
+@import 'sass/mixin';
+
+// 組件
+@import 'sass/component/btn';
+@import 'sass/component/card';
+@import 'sass/component/header';
+@import 'sass/component/footer';
+@import 'sass/component/login';
+
+// 版面配置
+@import 'sass/layout/header';
+@import 'sass/layout/footer';
+@import 'sass/layout/login';
+
+// 頁面
+@import 'sass/page/index';
+@import 'sass/page/about';
+@import 'sass/page/product';
+
+.w{
+    width: $a;
+}
+
+// 第二題，作用域
+// $z: 400px;
+.z{
+    $z: 300px !global; //提升作用域 全域變數 但不建議
+    width: $z;
+}
+.b{
+    width: $z;
+}
+
+// 變數轉型情境
+$name: content-box;
+$attr: border;
+
+.#{$name}{
+    box-sizing: content-box;
+    border: 1px solid $colorPrimary;
+    background-image: url('#{$name}.jpg');
+    #{$attr}: 5px;
+}
