@@ -12,12 +12,10 @@
 // 組件
 @import 'sass/component/btn';
 @import 'sass/component/card';
-@import 'sass/component/header';
-@import 'sass/component/footer';
-@import 'sass/component/login';
 
 // 版面配置
 @import 'sass/layout/header';
+@import 'sass/layout/body';
 @import 'sass/layout/footer';
 @import 'sass/layout/login';
 
@@ -51,3 +49,25 @@ $attr: border;
     #{$attr}: 5px;
 }
 
+//運算
+.aaa {
+    width: 100 + 50px;
+    height: 200 - 1 + px ;
+    font-size: 16 * 2 + pX;
+    font:30 / 2 + px //除法要注意 單位
+}
+
+//數值運算內建函式
+.bbb{
+    //width: round(134.422)+px;//四捨五入
+    //width: ceil(134.622px);;//無條件進位
+    width: floor(134.922) + px;//無條件捨去
+}
+
+.ccc{
+    color: lighten(#000, 100%) ; //變亮
+    background-color: darken(#fff, 100%); //變暗
+}
+// @import 'sass/component/header';
+// @import 'sass/component/footer';
+// @import 'sass/component/login';
