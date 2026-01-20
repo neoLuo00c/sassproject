@@ -111,3 +111,19 @@ h3{
         @content; // 允許使用者在混合後加入額外樣式
     }
 }
+
+// RWD 
+
+// table
+@mixin t {
+    @media screen and (max-width: 768px){
+        @content;        
+    }
+}
+
+// mobile
+@mixin m {
+    @media screen and (max-width: 480px){
+        @content;        
+    }
+}
