@@ -31,6 +31,8 @@
 .btn-circle{
     @include btn(10px, $colorPrimary, 25px, '\2713');
     margin: 10px auto;
+}   @include m{
+    max-width: 90%;
 }
 
 // 混合使用
