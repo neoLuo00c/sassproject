@@ -61,8 +61,8 @@ h3{
 }
 
 // 尺寸不給控制
-@mixin btnAll($size:default, $bgc:$colorPrimary, $style:default){
-    .btn-#{$size} #{$style}{
+@mixin btnAll($size:default, $bgc:$colorPrimary, $style:default, $outline: false){
+    .btn-#{$size}_#{$style}{
     // 尺寸
         @if $size == large {
             padding: 12px 24px;
@@ -83,10 +83,28 @@ h3{
     // 樣式
         @if $style == circle{
             border-radius: 25px;
+            @if $outline{
+                border: 2px solid darken($bgc, 10%);
+                background-color: transparent;
+                color: darken($bgc, 10%);
+                
+                &:hover{
+                    color: #fff;
+                }
+            }
         }@else{
             border-radius: 6px;
-        }
+            @if $outline{
+                border: 2px solid darken($bgc, 10%);
+                background-color: transparent;
+                color: darken($bgc, 10%);
 
+                &:hover{
+                    color: #fff;
+                }
+            }
+        }
+        // hover效果
         &:hover{
             background-color: darken($bgc, 10%); // 變暗
         }
