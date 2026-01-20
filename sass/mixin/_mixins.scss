@@ -26,8 +26,9 @@ h3{
 
 // Button styles
 // 大小 / 顏色 / 圓角 / hover 效果
+// 範例: @include btn(大小 , 顏色 , 圓角 , icon );
 
-@mixin btn($size, $bgc, $bdr){
+@mixin btn($size, $bgc, $bdr, $icon:null){
     // 大小
     padding: $size $size * 1.5;
     max-width: $size * 15;
