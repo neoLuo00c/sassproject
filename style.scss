@@ -91,3 +91,89 @@ $title: small;
         font-size: 16px;
     }
 }
+
+// @for 迴圈
+@for $i from 1 through 5 {
+    item-#{$i} {
+        width: $i * 100px;
+    }
+}
+
+// Mixin 距離產生器
+@mixin spacing($num: 10, $direction: bottom, $size:4px){
+    
+    // @for $i from 1 through 10{
+    //     .spacing-#{$i}{
+    //         margin-bottom: $i * 4px;
+    //     }
+    // }
+    @for $i from 1 through $num{
+        .spacing-#{$i}{
+            margin-#{$direction}: $i * $size;
+        }
+    }
+}
+
+@include spacing(10, bottom, 8px);
+
+@include grBg-darken(#ffceb6 , 10);
+@include grBg-lighten(#cc4400);
+
+// $image-list: img1 img2 img3 img4; //list
+
+@mixin bgimg($image-list){
+    @each $img in $image-list {
+        .#{$img}-bg {
+            background-image: url('./images/#{$img}.jpg');
+            width: 100vw;
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+}
+
+@include bgimg((slide1 slide2 slide3 slide4 )); //list
+
+$font-title: (
+    // key : value ,
+    h1 : 50px,
+    h2 : 40px,
+    h3 : 30px,
+    h4 : 20px,
+    div : 16px,
+    span : 12px,
+    'desc' : 10px,
+    'option' : 8px,
+); //map
+
+// h1{
+//     font-size: map-get($font-title , h3 );
+// }
+
+// 字體大小產生器
+@each $k , $v in $font-title {
+    #{$k}{
+        font-size: $v;
+    }
+}
+
+// color 規範
+$color :(
+    primary : #3366ff,
+    secondary : #d400e0,
+    danger : #ff3333,
+    warning : #ff9933,
+    success : #33cc66,
+    white: #fff,
+    black: #282828,
+);
+
+@each $name, $value in $color {
+    .#{$name}{
+        color: $value;
+    }
+    .#{$name}-bg{
+        background-color: $value;
+    }
+}
