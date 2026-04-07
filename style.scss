@@ -7,12 +7,11 @@
 @import 'sass/base/reset';
 
 // 函式庫
-@import 'sass/mixins';
+@import 'sass/mixins/mixins';
 
 // 組件
 @import 'sass/component/btn';
 @import 'sass/component/card';
-
 
 // 版面配置
 @import 'sass/layout/header';
@@ -24,6 +23,7 @@
 @import 'sass/page/index';
 @import 'sass/page/about';
 @import 'sass/page/product';
+
 
 .w{
     width: $a;
@@ -116,7 +116,8 @@ $title: small;
 
 @include spacing(10, bottom, 8px);
 
-@include grBg-darken(#ffceb6 , 10);
+// @include grBg-darken(#ffceb6 , 10);
+@include grBg-darken(#ffceb6);
 @include grBg-lighten(#cc4400);
 
 // $image-list: img1 img2 img3 img4; //list
@@ -177,3 +178,4 @@ $color :(
         background-color: $value;
     }
 }
+

@@ -131,27 +131,6 @@ h3{
 // 標題樣式
 @mixin title($fontsizeBase){
 
-    // 線條樣式
-    @mixin line(){
-
-        &::after{
-            content: '';
-            display: block;
-            width: 50px;
-            height: 2px;
-            background-color: currentColor;
-            margin: 5px auto 0 auto;
-        }
-        &::before{
-            content: '';
-            display: block;
-            width: 50px;
-            height: 2px;
-            background-color: currentColor;
-            margin: 5px auto 0 auto;
-        }
-    }
-
     h1{
         // font-size: $fontsizeBase * 5;
         // margin-bottom: 20px;
@@ -189,9 +168,30 @@ h3{
     }
 }
 
-.box{
-    @include borderRadius();
+// 線條樣式
+@mixin line(){
+
+    &::after{
+        content: '';
+        display: block;
+        width: 50px;
+        height: 2px;
+        background-color: currentColor;
+        margin: 5px auto 0 auto;
+    }
+    &::before{
+        content: '';
+        display: block;
+        width: 50px;
+        height: 2px;
+        background-color: currentColor;
+        margin: 5px auto 0 auto;
+    }
 }
+
+// .box{
+//     @include borderRadius();
+// }
 
 // 陰影
 @mixin shadow($level: 1){
